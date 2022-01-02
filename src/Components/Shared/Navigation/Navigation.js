@@ -36,7 +36,7 @@ const Navigation = ({ render }) => {
         <Container>
           <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
             <img className="logo" src="https://i.ibb.co/kJRg6D0/3.png" alt="" />
-            <h5 className="ms-2 mt-2 text-white">Shobdokosh</h5>
+            <h5 className="ms-2 mt-2 text-white">Shabdakosh</h5>
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">

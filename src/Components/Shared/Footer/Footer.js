@@ -51,7 +51,7 @@ const Footer = () => {
               </Col>
               <Col sm={12} md={4}>
                 <div className="footer-bottom-div">
-                  <h3>Foodies</h3>
+                  <h3>Shabdakosh</h3>
                   <ul className="list">
                     <li>
                       <Link to="#">about us</Link>
