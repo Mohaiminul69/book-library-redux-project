@@ -1,0 +1,17 @@
+.footerLogo {
+  width: 60px;
+}
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+.list li {
+  text-transform: capitalize;
+}
+.list li a {
+  color: white;
+  text-decoration: none;
+}
+.bgBlack {
+  background: #1a1a1a;
+}

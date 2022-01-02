@@ -1,0 +1,48 @@
+.sliderItem {
+  height: 100vh;
+  width: 100% !important;
+}
+.customSlider img,
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sliderContainer {
+  position: relative;
+  z-index: 1;
+}
+.sliderContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 0;
+}
+.bannerSlogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bannerSlogan img {
+  width: 100px;
+}
+@media (max-width: 1025px) {
+  .sliderItem {
+    height: 540px;
+  }
+}
+@media (max-width: 765px) {
+  .sliderItem {
+    height: 100vh;
+  }
+}
