@@ -76,8 +76,8 @@ const Footer = () => {
         </Row>
         <div className="d-flex justify-content-center mt-2">
           <p className="text-center">
-            Site managed by Foodies.com Copyright &copy; Foodies.com Limited
-            2021. All rights reserved.
+            Site managed by shabdakosh.com Copyright &copy; shabdakosh.com
+            Limited 2021. All rights reserved.
           </p>
         </div>
       </Container>

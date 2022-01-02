@@ -43,8 +43,8 @@ const Navigation = ({ render }) => {
             <NavLink className="navLink" to="/home">
               Home
             </NavLink>
-            <NavLink className="navLink" to="/userActivity">
-              User Activity
+            <NavLink className="navLink" to="/books">
+              Books
             </NavLink>
             {/* 
 <----------------- Showing Logout Button If the user is logged in ----------------->
