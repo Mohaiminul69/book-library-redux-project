@@ -1,39 +1,24 @@
-.App {
-  text-align: center;
+.tabNavFont {
+  font-size: 1.1em !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tabMarginTop {
+  margin-top: 6rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.cardTitleFont {
+  font-size: 1.4em !important;
+  font-weight: 600 !important;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.numberAlert {
+  background-color: #d5ebeb;
+  border-radius: 25px;
+  color: black;
+  font-size: 1em;
+  padding: 0 5px;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.cursor {
+  cursor: pointer;
 }

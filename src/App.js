@@ -7,6 +7,8 @@ import Login from "./Components/Login/Login/Login";
 import Register from "./Components/Login/Register/Register";
 import NotFound from "./Components/NotFound/NotFound";
 import AuthProvider from "./Context/AuthProvider/AuthProvider";
+import BooksHome from "./Components/Books/BooksHome/BooksHome";
+import DiscoverBooks from "./Components/Books/DiscoverBooks/DiscoverBooks";
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/example" element={<Example />} />
+        <Route path="/books" element={<BooksHome />} />
       </Routes>
     </AuthProvider>
   );
