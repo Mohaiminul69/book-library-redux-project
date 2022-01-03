@@ -20,7 +20,7 @@ const Navigation = ({ render }) => {
         });
       }
     } else {
-      nav.style.background = "#145a66";
+      nav.style.background = "rgba(27, 27, 27, 0.95)";
     }
   }, [render]);
 

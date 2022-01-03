@@ -1,0 +1,43 @@
+.bgLogin {
+  background: url("https://i.ibb.co/cgLrjVk/top-view-blue-ribbon-man-perfume.jpg")
+    no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+.bgLogin::after {
+  transition: 0.5s;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.86);
+}
+.googleIcon {
+  height: 30px;
+}
+.loginForm {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0.25em 0.25em 0.75em rgb(0 0 0 / 55%),
+    0.125em 0.125em 0.25em rgb(0 0 0 / 25%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.loginForm .customLink {
+  padding-left: 0;
+  margin-top: 5px;
+}

@@ -1,0 +1,27 @@
+.not-found-background {
+  background: url("https://i.ibb.co/w7Y8RqM/CLASSIC-MAQUETTE01-G-F39-RVB.jpg")
+    no-repeat center center/cover;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+.not-found-background::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.836);
+  z-index: -1;
+}
+.notFoundDiv {
+  display: flex;
+  padding: 50px 0;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+}
