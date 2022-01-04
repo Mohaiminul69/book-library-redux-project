@@ -6,11 +6,11 @@ import { fetchBooks } from "../../../redux/slices/bookSlice";
 
 const DiscoverBooks = () => {
     const books = useSelector((state) => state.books.discover);
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(fetchBooks());
-    }, [dispatch]);
+    // useEffect(() => {
+    //     dispatch(fetchBooks());
+    // }, [dispatch]);
 
     return (
         <div>
@@ -18,9 +18,9 @@ const DiscoverBooks = () => {
                 <h3>Discover Books</h3>
                 <div className='py-2'>
                     {
-                        books.map(books => <SingleDiscoverBook
-                            key={books.name}
-                            books={books}
+                        books.map(book => <SingleDiscoverBook
+                            key={book.name}
+                            book={book}
                         />)
                     }
                 </div>

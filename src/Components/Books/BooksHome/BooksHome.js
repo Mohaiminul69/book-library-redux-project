@@ -4,6 +4,8 @@ import Navigation from '../../Shared/Navigation/Navigation';
 import DiscoverBooks from '../DiscoverBooks/DiscoverBooks';
 import ReadingList from '../ReadingList/ReadingList';
 import { useSelector } from 'react-redux';
+import booksData from '../../../books.json';
+console.log(booksData);
 
 const BooksHome = () => {
     const readingList = useSelector((state) => state.books.readingList);

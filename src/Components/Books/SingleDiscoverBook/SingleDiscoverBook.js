@@ -3,13 +3,13 @@ import { Card, Col, Row } from 'react-bootstrap';
 import AddIcon from '@mui/icons-material/Add';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import StarIcon from '@mui/icons-material/Star';
-import { IconButton, Tooltip } from '@mui/material';
+import { Button, IconButton, Tooltip } from '@mui/material';
 import { useDispatch } from "react-redux";
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { addToReadingList } from "../../../redux/slices/bookSlice";
+import { Link } from 'react-router-dom';
 
-const SingleDiscoverBook = ({ books }) => {
-    const { img, name, author, rating, details } = books;
+const SingleDiscoverBook = ({ book }) => {
+    const { img, name, author, rating, details, price } = book;
     const dispatch = useDispatch();
 
     return (
@@ -19,7 +19,7 @@ const SingleDiscoverBook = ({ books }) => {
                     <Card className='flex-row my-2'>
                         <Row xs={1} md={1} lg={2}>
                             <Col lg={4}>
-                                <Card.Img src={img} />
+                                <Card.Img src={img} alt="Book Cover Image" />
                             </Col>
                             <Col lg={8}>
                                 <Card.Body>
@@ -43,14 +43,12 @@ const SingleDiscoverBook = ({ books }) => {
                                                     <StarIcon />
                                                 </div>}
                                             </div>
-                                            <div className='mx-1'>
-                                                <Tooltip title="Marked as Finished">
-                                                    <IconButton>
-                                                        <CheckCircleIcon />
-                                                    </IconButton>
-                                                </Tooltip>
-                                            </div>
                                             <div className='d-flex'>
+                                                <div className='mx-1'>
+                                                    <Tooltip title="Buy Now">
+                                                        <Link to={`/payment/${price}`} style={{textDecoration: 'none'}}><Button>Buy Now</Button></Link>
+                                                    </Tooltip>
+                                                </div>
                                                 <div className='mx-1'>
                                                     <Tooltip title="Read the Book">
                                                         <IconButton>
@@ -60,7 +58,7 @@ const SingleDiscoverBook = ({ books }) => {
                                                 </div>
                                                 <div className='mx-1'>
                                                     <Tooltip title="Add to Reading List">
-                                                        <IconButton onClick={() => dispatch(addToReadingList(books))} >
+                                                        <IconButton onClick={() => dispatch(addToReadingList(book))} >
                                                             <AddIcon />
                                                         </IconButton>
                                                     </Tooltip>

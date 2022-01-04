@@ -9,6 +9,8 @@ import NotFound from "./Components/NotFound/NotFound";
 import AuthProvider from "./Context/AuthProvider/AuthProvider";
 import BooksHome from "./Components/Books/BooksHome/BooksHome";
 import DiscoverBooks from "./Components/Books/DiscoverBooks/DiscoverBooks";
+import Payment from "./Components/Books/Payment/Payment";
+import PrivateRoute from "./Components/Login/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -19,8 +21,8 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/example" element={<Example />} />
-        <Route path="/books" element={<BooksHome />} />
+        <Route path="/books" element={<PrivateRoute><BooksHome /></PrivateRoute>} />
+        <Route path="/payment/:price" element={<PrivateRoute><Payment /></PrivateRoute>} />
       </Routes>
     </AuthProvider>
   );

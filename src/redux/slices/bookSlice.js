@@ -1,18 +1,21 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
+import booksData from '../../books.json';
+console.log(booksData);
 
 // First, create the thunk
-export const fetchBooks = createAsyncThunk(
-    'book/fetchBooks',
-    async () => {
-        const response = await fetch('./books.json').then(res => res.json())
-        return response.data
-    }
-)
+// export const fetchBooks = createAsyncThunk(
+//     'book/fetchBooks',
+//     async () => {
+//         const response = await fetch('../../books.json')
+//             .then(res => res.json())
+//         return response.data
+//     }
+// )
 
 const bookSlice = createSlice({
     name: 'book',
     initialState: {
-        discover: [],
+        discover: booksData,
         readingList: [],
         finishedList: [],
         status: 'idle'
@@ -25,15 +28,15 @@ const bookSlice = createSlice({
             state.readingList = state.readingList.filter(book => book.id !== payload.id);
         },
     },
-    extraReducers: (builder) => {
-        builder.addCase(fetchBooks.fulfilled, (state, action) => {
-            state.discover = action.payload;
-            state.status = 'success'
-        })
-        builder.addCase(fetchBooks.pending, (state, action) => {
-            state.status = 'pending';
-        })
-    },
+    // extraReducers: (builder) => {
+    //     builder.addCase(fetchBooks.fulfilled, (state, action) => {
+    //         state.discover = action.payload;
+    //         state.status = 'success'
+    //     })
+    //     builder.addCase(fetchBooks.pending, (state, action) => {
+    //         state.status = 'pending';
+    //     })
+    // },
 
 });
 

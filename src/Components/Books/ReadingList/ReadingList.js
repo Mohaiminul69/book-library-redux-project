@@ -15,9 +15,9 @@ const ReadingList = () => {
             </Alert>}
 
             {
-                readingList.map(books => <SingleDiscoverBook
-                    key={books.name}
-                    books={books}
+                readingList.map(book => <SingleDiscoverBook
+                    key={book.name}
+                    book={book}
                 />)
             }
         </div>
