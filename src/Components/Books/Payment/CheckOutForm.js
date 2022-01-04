@@ -14,6 +14,7 @@ const CheckOutForm = (props) => {
     const [process, setProcessing] = useState(false);
     const [success, setSuccess] = useState(false);
     const [clientSecret, setClientSecret] = useState("");
+
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
         fetch("https://salty-river-32904.herokuapp.com/create-payment-intent", {
@@ -96,7 +97,7 @@ const CheckOutForm = (props) => {
 
 
                     <div className="card-title1 d-flex px-4">
-                        <p className="item text-muted">Totall Price </p>
+                        <p className="item text-muted">Total Price </p>
                         <p>{price} $</p>
                     </div>
 
@@ -106,7 +107,7 @@ const CheckOutForm = (props) => {
                         <p className="text-muted">Your payment details</p>
 
                         <CardElement
-                            className="numbr mb-3"
+                            className="number mb-3"
                             options={{
                                 style: {
                                     base: {
@@ -127,7 +128,7 @@ const CheckOutForm = (props) => {
                         <div className="footer text-center p-0">
                             <div className="col-lg-12 col-12 p-0">
                                 {process ? <Box sx={{ width: '100%' }}><LinearProgress color="secondary" /></Box> : <button className="order btn btn-outline-dark mb-2" type="submit" disabled={!stripe || success}>
-                                    Pay$ {price}
+                                    Pay $ {price}
                                 </button>}
                             </div>
                         </div>

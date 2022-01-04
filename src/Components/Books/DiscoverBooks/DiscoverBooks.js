@@ -11,7 +11,7 @@ const DiscoverBooks = () => {
     // useEffect(() => {
     //     dispatch(fetchBooks());
     // }, [dispatch]);
-
+    
     return (
         <div>
             <div className='px-2'>
@@ -19,7 +19,7 @@ const DiscoverBooks = () => {
                 <div className='py-2'>
                     {
                         books.map(book => <SingleDiscoverBook
-                            key={book.name}
+                            key={book.id}
                             book={book}
                         />)
                     }

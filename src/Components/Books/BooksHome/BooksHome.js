@@ -4,11 +4,11 @@ import Navigation from '../../Shared/Navigation/Navigation';
 import DiscoverBooks from '../DiscoverBooks/DiscoverBooks';
 import ReadingList from '../ReadingList/ReadingList';
 import { useSelector } from 'react-redux';
-import booksData from '../../../books.json';
-console.log(booksData);
+import FinishedList from '../FinishedList/FinishedList';
 
 const BooksHome = () => {
     const readingList = useSelector((state) => state.books.readingList);
+    const finishedList = useSelector((state) => state.books.finishedList);
 
     return (
         <div>
@@ -27,7 +27,7 @@ const BooksHome = () => {
                                             <Nav.Link eventKey="secondTab" className='tabNavFont'>Reading List <span className='numberAlert'>{readingList.length}</span></Nav.Link>
                                         </Nav.Item>
                                         <Nav.Item className='cursor'>
-                                            <Nav.Link eventKey="thirdTab" className='tabNavFont'>Finished List <span className='numberAlert'>0</span></Nav.Link>
+                                            <Nav.Link eventKey="thirdTab" className='tabNavFont'>Finished List <span className='numberAlert'>{finishedList.length}</span></Nav.Link>
                                         </Nav.Item>
                                     </Nav>
                                 </Col>
@@ -40,7 +40,7 @@ const BooksHome = () => {
                                             <ReadingList />
                                         </Tab.Pane>
                                         <Tab.Pane eventKey="thirdTab">
-
+                                            <FinishedList />
                                         </Tab.Pane>
                                     </Tab.Content>
                                 </Col>

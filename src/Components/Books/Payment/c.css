@@ -36,7 +36,7 @@ input {
 }
 
 
-
+/* 
 .footer {
     background-color: #00BCD4;
     color: white
@@ -45,9 +45,9 @@ input {
 .footer:hover {
     cursor: pointer;
     background-color: #0097A7
-}
+} */
 
-.numbr {
+.number {
     border-bottom: 1px solid #c1bcbc;
     padding-bottom: 8px
 }
@@ -64,8 +64,8 @@ input:focus {
     box-shadow: none !important
 }
 
-.numbr.numbr.hover,
-.numbr:hover {
+.number.number.hover,
+.number:hover {
     border-bottom: 1px solid aqua
 }
 

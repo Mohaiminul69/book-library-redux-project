@@ -1,8 +1,7 @@
 import React from 'react';
 import { Alert } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import SingleDiscoverBook from '../SingleDiscoverBook/SingleDiscoverBook';
+import SingleReadingListBook from '../SingleReadingListBook/SingleReadingListBook';
 
 const ReadingList = () => {
     const readingList = useSelector((state) => state.books.readingList);
@@ -10,13 +9,12 @@ const ReadingList = () => {
     return (
         <div>
             {readingList.length === 0 && <Alert variant="primary">
-                Looks like your Reading List is empty, Add Books to your &nbsp;
-                <Link to="/books" className='text-decoration-none'>Discover Books</Link>
+                Looks like your Reading List is empty, Find books from Discover Books.
             </Alert>}
 
             {
-                readingList.map(book => <SingleDiscoverBook
-                    key={book.name}
+                readingList.map(book => <SingleReadingListBook
+                    key={book.id}
                     book={book}
                 />)
             }

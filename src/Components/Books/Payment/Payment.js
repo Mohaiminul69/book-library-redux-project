@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import { useParams } from 'react-router-dom';
@@ -17,9 +17,7 @@ const Payment = () => {
                         price={price}
                     />
                 </Elements>
-
             </div>
-
         </div>
     );
 };
