@@ -16,7 +16,6 @@ const NotFound = () => {
       <Container className="notFoundDiv">
         <h1 className="display-1 text-danger">404</h1>
         <h1 className="display-4">Page Not Found</h1>
-        <h1 className="fw-light text-capitalize">Are you lost baby girl !!</h1>
         <div className="my-3">
           <Link to="/">
             <Button variant="contained" className="customBtn me-5">

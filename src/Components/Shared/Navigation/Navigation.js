@@ -3,6 +3,7 @@ import { Container, Navbar } from "react-bootstrap";
 import Button from "@mui/material/Button";
 import { Link, NavLink } from "react-router-dom";
 import "./navigation.css";
+import useAuth from "../../../Hooks/useAuth";
 
 const Navigation = ({ render }) => {
   useEffect(() => {
@@ -24,6 +25,7 @@ const Navigation = ({ render }) => {
     }
   }, [render]);
 
+  const { user, logout } = useAuth();
   return (
     <Fragment>
       <Navbar
@@ -49,11 +51,8 @@ const Navigation = ({ render }) => {
             {/* 
 <----------------- Showing Logout Button If the user is logged in ----------------->
 */}
-            {/* {user?.email ? (
+            {user?.email ? (
               <Fragment>
-                <NavLink className="navLink" to="/dashboard">
-                  Dashboard
-                </NavLink>
                 <Button
                   className="customBtn btn-red ms-3"
                   onClick={logout}
@@ -71,21 +70,21 @@ const Navigation = ({ render }) => {
                   Login
                 </NavLink>
               </Fragment>
-            )} */}
+            )}
             {/* 
 <----------------------- Showing Display Name of User ----------------------->
  */}
-            {/* {user?.displayName && (
+            {user?.displayName && (
               <Navbar.Text className="ms-3 text-white">
                 <span>{user.displayName}</span>
               </Navbar.Text>
-            )} */}
+            )}
             {/* 
 <----------------------- Showing User Display Picture ----------------------->
  */}
-            {/* {user?.photoURL && (
+            {user?.photoURL && (
               <img className="displayPic ms-3" src={user.photoURL} alt="" />
-            )} */}
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>

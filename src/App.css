@@ -1,3 +1,57 @@
+/* @font-face {
+  font-family: gill;
+  src: url("/src/fonts/Gill\ Sans.otf");
+}
+body,
+input {
+  font-family: gill;
+} */
+.customBtn {
+  padding: 6px 30px !important;
+  background: black !important;
+}
+.customBtn:hover {
+  background: rgb(51, 51, 51) !important;
+}
+.btn-red {
+  background: #dc3545 !important;
+}
+.btn-green {
+  background: #198754 !important;
+}
+.btn-grey {
+  background: #000000 !important;
+}
+a {
+  text-decoration: none !important;
+}
+/* .customHorizontalLine {
+  height: 4px;
+  background: black;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 50%;
+} */
+.customHorizontalLine {
+  height: 3px;
+  background: black;
+  width: 50%;
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+}
+.customHorizontalLine::after,
+.customHorizontalLine::before {
+  position: absolute;
+  content: "";
+  top: 7px;
+  left: 15px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgb(170, 170, 170);
+}
+
 .tabNavFont {
   font-size: 1.1em !important;
 }
