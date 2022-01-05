@@ -7,7 +7,6 @@ import Register from "./Components/Login/Register/Register";
 import NotFound from "./Components/NotFound/NotFound";
 import AuthProvider from "./Context/AuthProvider/AuthProvider";
 import BooksHome from "./Components/Books/BooksHome/BooksHome";
-import DiscoverBooks from "./Components/Books/DiscoverBooks/DiscoverBooks";
 import Payment from "./Components/Books/Payment/Payment";
 import PrivateRoute from "./Components/Login/PrivateRoute/PrivateRoute";
 
