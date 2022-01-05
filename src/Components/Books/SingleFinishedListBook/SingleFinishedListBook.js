@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 
 const SingleFinishedListBook = ({ book }) => {
     const { img, name, author, rating, details, price } = book;
+    const premiumAlert = () => {
+        alert("Premium user can read the book! N.B. It's a sample button! ")
+    }
 
     return (
         <div>
@@ -42,14 +45,14 @@ const SingleFinishedListBook = ({ book }) => {
                                             <div className='d-flex'>
                                                 <div className='mx-1'>
                                                     <Tooltip title="Read the Book">
-                                                        <IconButton>
+                                                        <IconButton onClick={premiumAlert} className='hoverBlack'>
                                                             <VisibilityIcon />
                                                         </IconButton>
                                                     </Tooltip>
                                                 </div>
                                                 <div className='mx-1'>
                                                     <Tooltip title="Buy Now">
-                                                        <Link to={`/payment/${price}`} style={{ textDecoration: 'none' }}><Button>Buy Now</Button></Link>
+                                                        <Link to={`/payment/${price}`} style={{ textDecoration: 'none' }}><Button className='btnBg txtGreen'>Buy Now</Button></Link>
                                                     </Tooltip>
                                                 </div>
                                             </div>

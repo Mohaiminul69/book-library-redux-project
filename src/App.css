@@ -10,21 +10,27 @@ input {
   padding: 6px 30px !important;
   background: black !important;
 }
+
 .customBtn:hover {
   background: rgb(51, 51, 51) !important;
 }
+
 .btn-red {
   background: #dc3545 !important;
 }
+
 .btn-green {
   background: #198754 !important;
 }
+
 .btn-grey {
   background: #000000 !important;
 }
+
 a {
   text-decoration: none !important;
 }
+
 /* .customHorizontalLine {
   height: 4px;
   background: black;
@@ -40,6 +46,7 @@ a {
   margin: 0 auto;
   z-index: 1;
 }
+
 .customHorizontalLine::after,
 .customHorizontalLine::before {
   position: absolute;
@@ -75,4 +82,30 @@ a {
 
 .cursor {
   cursor: pointer;
+}
+
+.hoverBlack:hover {
+  color: black;
+}
+
+.hoverGreen:hover {
+  color: #198754;
+}
+
+.hoverRed:hover {
+  color: #dc3545;
+}
+
+.btnBg:hover {
+  background-color: #dc3545 !important;
+  color: white !important;
+}
+
+.ratingStar {
+  color: #F79028;
+}
+
+.txtGreen {
+  color: #198754 !important;
+  font-weight: bold !important;
 }

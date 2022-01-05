@@ -11,6 +11,9 @@ import { Link } from 'react-router-dom';
 const SingleDiscoverBook = ({ book }) => {
     const { img, name, author, rating, details, price } = book;
     const dispatch = useDispatch();
+    const premiumAlert = () => {
+        alert("Premium user can read the book! N.B. It's a sample button! ")
+    }
 
     return (
         <div>
@@ -30,35 +33,35 @@ const SingleDiscoverBook = ({ book }) => {
                                         <div className='d-flex justify-content-between'>
                                             <div>
                                                 {rating === 5 && <div>
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                    <StarIcon />
+                                                    <StarIcon className='ratingStar' />
+                                                    <StarIcon className='ratingStar' />
+                                                    <StarIcon className='ratingStar' />
+                                                    <StarIcon className='ratingStar' />
+                                                    <StarIcon className='ratingStar' />
                                                 </div>}
                                                 {rating === 4 && <div>
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                    <StarIcon />
+                                                    <StarIcon className='ratingStar' />
+                                                    <StarIcon className='ratingStar' />
+                                                    <StarIcon className='ratingStar' />
+                                                    <StarIcon className='ratingStar' />
                                                 </div>}
                                             </div>
                                             <div className='d-flex'>
                                                 <div className='mx-1'>
                                                     <Tooltip title="Buy Now">
-                                                        <Link to={`/payment/${price}`} style={{textDecoration: 'none'}}><Button>Buy Now</Button></Link>
+                                                        <Link to={`/payment/${price}`} style={{ textDecoration: 'none' }}><Button className='btnBg txtGreen'>Buy Now</Button></Link>
                                                     </Tooltip>
                                                 </div>
                                                 <div className='mx-1'>
                                                     <Tooltip title="Read the Book">
-                                                        <IconButton>
+                                                        <IconButton onClick={premiumAlert} className='hoverBlack'>
                                                             <VisibilityIcon />
                                                         </IconButton>
                                                     </Tooltip>
                                                 </div>
                                                 <div className='mx-1'>
                                                     <Tooltip title="Add to Reading List">
-                                                        <IconButton onClick={() => dispatch(addToReadingList(book))} >
+                                                        <IconButton onClick={() => dispatch(addToReadingList(book))} className='hoverGreen'>
                                                             <AddIcon />
                                                         </IconButton>
                                                     </Tooltip>
